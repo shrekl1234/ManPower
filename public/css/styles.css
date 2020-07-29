@@ -1,0 +1,57 @@
+.cardImagePrimary{
+    padding: 10px;;
+    height: 100px;
+}
+
+.cardImageSecondary{
+    height: 70px;
+    
+    padding-left: 15px;
+}
+
+.foundNearYou{
+    margin: 5px auto;
+}
+
+.card{
+    background-color: #ecfcff;
+    height: 28vh;
+    margin: 5px;
+}
+div,p{
+    text-decoration: none;
+}
+.card:hover{
+    
+    text-decoration: none;
+    margin-top: 10px;
+    position: relative;
+    bottom: 10px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;}
+
+.cardText{
+  color: #c7b198;
+  position: absolute;
+  margin: 0;
+  top: 45%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+}
+
+.sidebarImage{
+    height: 150px;
+}
+
+.sidebar{
+}
+
+.cardSpecific{
+    height: 40vh;
+    background-color: teal;
+}

@@ -25,6 +25,9 @@ app.get("/signup", (req, res) => {
 app.get("/register", (req, res) => {
   res.render("register");
 });
+app.get("/cooking", (req, res) => {
+  res.render("pages/cooking");
+});
 
 
 app.listen(3000, ()=>{
