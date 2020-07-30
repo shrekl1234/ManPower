@@ -29,6 +29,10 @@ app.get("/cooking", (req, res) => {
   res.render("pages/cooking");
 });
 
+app.get("/cleaning", (req, res) => {
+  res.render("pages/service-not-found");
+});
+
 
 app.listen(3000, ()=>{
     console.log("server started at port 3000");

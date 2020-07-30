@@ -1,0 +1,31 @@
+<%- include("../partials/header.ejs") -%>
+<style>
+    .noServiceFoundText {
+        padding: 20px;
+        background-color: #f6f6f6;
+        border: rgb(139, 136, 129, .5) solid 5px;
+        border-radius: 10px;
+    }
+</style>
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-sm-0"></div>
+        <div class="col-lg-4 " style="text-align: center;">
+            <div class="noServiceFoundText">
+                <p>
+                    Oops! No service registered at this place. Kindly encourage if you <br>
+                    know someone to register.
+                </p>
+                <h4>Lets Grow Together</h4>
+                <a href="#"><button class="btn btn-lg btn-primary"><i class="fas fa-share-square"></i>
+                        Share</button></a>
+                <a href="/"><button class="btn btn-lg btn-primary"><i class="fas fa-house-user"></i> Go to
+                        Home</button></a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-0"></div>
+    </div>
+</div>
+<br><br><br>
+<%- include("../partials/footer.ejs") -%>

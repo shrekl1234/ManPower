@@ -134,80 +134,93 @@
                     <h3 class="register-heading">Registraion as Service Provider</h3>
                     <form class="row register-form" method="POST" action="/register">
                         <div class="col-md-6 col-lg-12">
-                            <!-- Your Services -->
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option class="hidden" selected disabled>Please select your Service *
-                                    </option>
-                                    <option>Cooking</option>
-                                    <option>Cleaning</option>
-                                    <option>Tiffin Services</option>
-                                </select>
+                            <div class="row">
+                                <!-- FirstName -->
+                                <div class="form-group col-lg-4">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                </div>
+                                <!-- LastName -->
+                                <div class="form-group col-lg-4">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <!-- Gender -->
+                                <div class="form-group col-lg-4">
+                                    <div class="maxl">
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="male" checked>
+                                            <span> Male </span>
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="female">
+                                            <span>Female </span>
+                                        </label>
+                                    </div>
+                                </div>
+
                             </div>
-                            <!-- Mobile Numeber -->
-                            <div class="form-group">
-                                <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control"
-                                    placeholder="Your Phone *" value="" />
-                            </div>
-                            <!-- Password -->
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password *" value="" />
-                            </div>
-                            <!-- Confirm Password -->
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                            </div>
-                            <!-- FirstName -->
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name *" value="" />
-                            </div>
-                            <!-- LastName -->
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                            </div>
-                            <!-- Age -->
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="Age *" value="">
-                            </div>
-                            <!--Rate -->
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option class="hidden" selected disabled>Per Person *
-                                    </option>
-                                    <option>Fixed</option>
-                                    <option>Negotiable</option>
-                                </select>
-                            </div>
-                            <!-- Speciality -->
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Specialty" value="" />
-                            </div>
-                            <!--Available Hours -->
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option class="hidden" selected disabled>Available Hours *
-                                    </option>
-                                    <option>Morining</option>
-                                    <option>Evening</option>
-                                    <option>As Require</option>
-                                    <option>24/7</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <div class="maxl">
-                                    <label class="radio inline">
-                                        <input type="radio" name="gender" value="male" checked>
-                                        <span> Male </span>
-                                    </label>
-                                    <label class="radio inline">
-                                        <input type="radio" name="gender" value="female">
-                                        <span>Female </span>
-                                    </label>
+                            <div class="row">
+                                <!-- Your Services -->
+                                <div class="form-group col-lg-6">
+                                    <select class="form-control">
+                                        <option class="hidden" selected disabled>Please select your Service *
+                                        </option>
+                                        <option>Cooking</option>
+                                        <option>Cleaning</option>
+                                        <option>Tiffin Services</option>
+                                    </select>
+                                </div>
+                                <!-- Mobile Numeber -->
+                                <div class="form-group col-lg-6">
+                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *"
+                                        value="" />
                                 </div>
                             </div>
-
-                            <button type="submit" class="btn btn-lg btn-primary"><span>Register as Service
-                                    Provider</span> </button>
+                            <div class="row">
+                                <!-- Age -->
+                                <div class="form-group col">
+                                    <input type="number" class="form-control" placeholder="Age *" value="">
+                                </div>
+                                <!--Rate -->
+                                <div class="form-group col">
+                                    <select class="form-control">
+                                        <option class="hidden" selected disabled>Per Person *
+                                        </option>
+                                        <option>Fixed</option>
+                                        <option>Negotiable</option>
+                                    </select>
+                                </div>
+                                <!-- Speciality -->
+                                <div class="form-group col">
+                                    <input type="text" class="form-control" placeholder="Specialty" value="" />
+                                </div>
+                                <!--Available Hours -->
+                                <div class="form-group col">
+                                    <select class="form-control">
+                                        <option class="hidden" selected disabled>Available Hours *
+                                        </option>
+                                        <option>Morining</option>
+                                        <option>Evening</option>
+                                        <option>As Require</option>
+                                        <option>24/7</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <!-- Password -->
+                                <div class="form-group col-lg-6">
+                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                </div>
+                                <!-- Confirm Password -->
+                                <div class="form-group col-lg-6">
+                                    <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button type="submit" class="btn btn-lg btn-primary col"><span>Register as Service
+                                        Provider <i class="fas fa-user-tie"></i> </span> </button>
+                            </div>
+                                    
                         </div>
                     </form>
                 </div>
