@@ -1,0 +1,179 @@
+<%- include("../partials/header") -%>
+<style>
+    .col {
+        padding: 15px;
+        margin: 0;
+    }
+
+    .cardSpecific {
+        background-color: #f6f6f6;
+        height: 40vh;
+        color: #0c056d;
+        border-radius: 30px;
+        border: blue solid 2px;
+    }
+
+    .cardSpecific:hover {
+        transform: scale(1.05);
+        transition-duration: 0.5s;
+    }
+
+    .sidebar {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .sidebarImage {
+        height: 150px;
+    }
+
+    .cardSpecificImage {
+        height: 100px;
+    }
+</style>
+<div class="container" style="margin: 20px auto;">
+    <div class="row">
+        <!-- sidebar -->
+        <div class="col col-lg-2 sidebar">
+            <div style="position: fixed; padding-top: 60px;">
+                <img src="https://image.flaticon.com/icons/svg/3058/3058973.svg" alt="cooking-img" class="sidebarImage">
+                <hr>
+                <h2>Cooking</h2>
+                <hr>
+                <form action="/cooking" method="POST">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option class="hidden" selected disabled>Gender
+                            </option>
+                            <option>Any</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option class="hidden" selected disabled>Food type
+                            </option>
+                            <option>Any</option>
+                            <option>North Indian</option>
+                            <option>South Indian</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- cards -->
+        <div class="col">
+            <!-- first row of cards -->
+            <div class="row">
+                <!-- card 1 -->
+                <div class="col" style="text-align: center;">
+                    <div class="cardSpecific">
+                        <div class="row ">
+                            <div class="col cardSpecificImage">
+                                <img src="https://image.flaticon.com/icons/svg/2919/2919600.svg" alt=""
+                                    class="cardSpecificImage">
+                            </div>
+                            <div class="col cardSpecificNameAge" style="position: relative; top: 30px ;">
+                                <h5>Mrs. S. XXXX</h5>
+                                <h6>Age: 38</h6>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 20px ;">
+                            <div class="col col-lg-9 cardSpecificText" style="text-align: center;">
+                                <h5 class="cardSpecificSpecialityText">Specialed in North Indian Food</h5>
+                                <h6>Morning/Evening. Rate 1000/- per person. <br>
+                                    Includes cooking & cleaning kitchenware.</h6>
+                            </div>
+                            <div class="col col-lg-3 " style="margin-top: 20px ;">
+                                <button class="btn btn-primary" style="padding: 5px 20px;"><span>Call</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="col" style="text-align: center;">
+                    <div class="cardSpecific">
+                        <div class="row ">
+                            <div class="col cardSpecificImage">
+                                <img src="https://image.flaticon.com/icons/svg/2919/2919600.svg" alt=""
+                                    class="cardSpecificImage">
+                            </div>
+                            <div class="col cardSpecificNameAge" style="position: relative; top: 30px ;">
+                                <h5>Mrs. S. XXXX</h5>
+                                <h6>Age: 38</h6>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 20px ;">
+                            <div class="col col-lg-9 cardSpecificText" style="text-align: center;">
+                                <h5 class="cardSpecificSpecialityText">Specialed in North Indian Food</h5>
+                                <h6>Morning/Evening. Rate 1000/- per person. <br>
+                                    Includes cooking & cleaning kitchenware.</h6>
+                            </div>
+                            <div class="col col-lg-3 " style="margin-top: 20px ;">
+                                <button class="btn btn-primary" style="padding: 5px 20px;"><span>Call</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- second row of cards -->
+            <div class="row">
+                <!-- card 1 -->
+                <div class="col" style="text-align: center;">
+                    <div class="cardSpecific">
+                        <div class="row ">
+                            <div class="col cardSpecificImage">
+                                <img src="https://image.flaticon.com/icons/svg/2919/2919600.svg" alt=""
+                                    class="cardSpecificImage">
+                            </div>
+                            <div class="col cardSpecificNameAge" style="position: relative; top: 30px ;">
+                                <h5>Mrs. S. XXXX</h5>
+                                <h6>Age: 38</h6>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 20px ;">
+                            <div class="col col-lg-9 cardSpecificText" style="text-align: center;">
+                                <h5 class="cardSpecificSpecialityText">Specialed in North Indian Food</h5>
+                                <h6>Morning/Evening. Rate 1000/- per person. <br>
+                                    Includes cooking & cleaning kitchenware.</h6>
+                            </div>
+                            <div class="col col-lg-3 " style="margin-top: 20px ;">
+                                <button class="btn btn-primary" style="padding: 5px 20px;"><span>Call</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="col" style="text-align: center;">
+                    <div class="cardSpecific">
+                        <div class="row ">
+                            <div class="col cardSpecificImage">
+                                <img src="https://image.flaticon.com/icons/svg/2919/2919600.svg" alt=""
+                                    class="cardSpecificImage">
+                            </div>
+                            <div class="col cardSpecificNameAge" style="position: relative; top: 30px ;">
+                                <h5>Mrs. S. XXXX</h5>
+                                <h6>Age: 38</h6>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 20px ;">
+                            <div class="col col-lg-9 cardSpecificText" style="text-align: center;">
+                                <h5 class="cardSpecificSpecialityText">Specialed in North Indian Food</h5>
+                                <h6>Morning/Evening. Rate 1000/- per person. <br>
+                                    Includes cooking & cleaning kitchenware.</h6>
+                            </div>
+                            <div class="col col-lg-3 " style="margin-top: 20px ;">
+                                <button class="btn btn-primary" style="padding: 5px 20px;"><span>Call</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<%- include("../partials/footer.ejs") -%>

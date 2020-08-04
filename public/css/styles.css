@@ -43,3 +43,7 @@ div,p{
 
 }
 
+.card a{
+    height: 100%;
+    width: 100%;
+}
