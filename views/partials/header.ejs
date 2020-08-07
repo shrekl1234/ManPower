@@ -14,4 +14,32 @@
 </head>
 
 <body>
+    <script sync
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYQigCYpTDA190O1pmQVrT0_4dvBhVPYk&callback=initMap">
+        </script>
+
+    <script>
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+            console.log(pos.lat, pos.lng);
+            // var geocoder = new google.maps.Geocoder;
+            // geocoder.geocode({ 'location': pos }, function (results, status) {
+            //     console.log(status);
+            //     console.log(results);
+            //     if (status === 'OK') {
+            //         if (results[0]) {
+            //             console.log(results[0]);
+            //         } else {
+            //             window.alert('No results found');
+            //         }
+            //     } else {
+            //         window.alert('Geocoder failed due to: ' + status);
+            //     }
+            // });
+        });
+</script>
+   
     <%- include("./navbar.ejs") -%>

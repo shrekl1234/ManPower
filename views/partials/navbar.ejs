@@ -18,14 +18,24 @@
             </li>
             <span style="margin: auto 250px;"></span>
             <li class="nav-item">
-                <a class="nav-link text-primary" href="/register">Register as a Professional? <i class="fas fa-user-tie"></i></a>
+                <a class="nav-link text-primary" href="/register">Register as a Professional? <i
+                        class="fas fa-user-tie"></i></a>
             </li>
+            <% if(isUserLoggedIn){ %>
+            <li class="nav-item">
+                <a class="nav-link text-primary ">Hello <%=firstName%></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-primary " href="/logout">Logout <i class="fas fa-sign-out-alt"></i></a>
+            </li>
+            <%   }else { %>
             <li class="nav-item">
                 <a class="nav-link text-primary " href="/login">Login <i class="fas fa-sign-in-alt"></i></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-primary" href="/signup">Sign Up <i class="fas fa-user-plus"></i></a>
             </li>
+            <%}%>
         </ul>
     </div>
 </nav>
