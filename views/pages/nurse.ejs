@@ -37,9 +37,9 @@
         <!-- sidebar -->
         <div class="col col-lg-2 sidebar">
             <div style="position: fixed; padding-top: 60px;">
-                <img src="https://image.flaticon.com/icons/svg/3058/3058973.svg" alt="cooking-img" class="sidebarImage">
+                <img src="https://image.flaticon.com/icons/svg/3011/3011274.svg" alt="cooking-img" class="sidebarImage">
                 <hr>
-                <h2>Cooking</h2>
+                <h2>Nurse</h2>
                 <hr>
                 <form action="/cooking" method="POST">
                     <div class="form-group">
@@ -67,25 +67,32 @@
         <!-- cards -->
         <div class="col">
             <!-- first row of cards -->
+            <% for(let i = 0 ; i<nurseData.length; i++){ %>
+            <%  if(i%2==0){%>
             <div class="row">
-                <!-- card 1 -->
+                <%  }%>
+            
                 <div class="col" style="text-align: center;">
                     <div class="cardSpecific">
                         <div class="row ">
                             <div class="col cardSpecificImage">
-                                <img src="https://image.flaticon.com/icons/svg/2919/2919600.svg" alt=""
-                                    class="cardSpecificImage">
+                                <img src=<%= nurseData[i].profilePhoto %> alt="" class="cardSpecificImage">
                             </div>
                             <div class="col cardSpecificNameAge" style="position: relative; top: 30px ;">
-                                <h5>Mrs. S. XXXX</h5>
-                                <h6>Age: 38</h6>
-                            </div>
-                        </div>
-                        <div class="row" style="padding-top: 20px ;">
-                            <div class="col col-lg-9 cardSpecificText" style="text-align: center;">
-                                <h5 class="cardSpecificSpecialityText">Specialed in North Indian Food</h5>
-                                <h6>Morning/Evening. Rate 1000/- per person. <br>
-                                    Includes cooking & cleaning kitchenware.</h6>
+                                <h5>
+                                    <%if(nurseData[i].gender === "male"){%>
+                                    Mr. <%=nurseData[i].name %>
+                                    <%}else{%>
+                                    Mrs. <%=nurseData[i].name %>
+                                    <%}%>
+                                        </h5>
+                                        <h6>Age: 38</h6>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding-top: 20px ;">
+                                    <div class="col col-lg-9 cardSpecificText" style="text-align: center;">
+                                        <h5 class="cardSpecificSpecialityText"><%= nurseData[i].speciality %></h5>
+                                <h6><%= nurseData[i].workOffered %></h6>
                             </div>
                             <div class="col col-lg-3 " style="margin-top: 20px ;">
                                 <button class="btn btn-primary" style="padding: 5px 20px;"><span>Call</span></button>
@@ -93,85 +100,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- card 2 -->
-                <div class="col" style="text-align: center;">
-                    <div class="cardSpecific">
-                        <div class="row ">
-                            <div class="col cardSpecificImage">
-                                <img src="https://image.flaticon.com/icons/svg/2919/2919600.svg" alt=""
-                                    class="cardSpecificImage">
-                            </div>
-                            <div class="col cardSpecificNameAge" style="position: relative; top: 30px ;">
-                                <h5>Mrs. S. XXXX</h5>
-                                <h6>Age: 38</h6>
-                            </div>
-                        </div>
-                        <div class="row" style="padding-top: 20px ;">
-                            <div class="col col-lg-9 cardSpecificText" style="text-align: center;">
-                                <h5 class="cardSpecificSpecialityText">Specialed in North Indian Food</h5>
-                                <h6>Morning/Evening. Rate 1000/- per person. <br>
-                                    Includes cooking & cleaning kitchenware.</h6>
-                            </div>
-                            <div class="col col-lg-3 " style="margin-top: 20px ;">
-                                <button class="btn btn-primary" style="padding: 5px 20px;"><span>Call</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
+            
+            
+                <%if((i+1)%2==0){%>
             </div>
-            <!-- second row of cards -->
-            <div class="row">
-                <!-- card 1 -->
-                <div class="col" style="text-align: center;">
-                    <div class="cardSpecific">
-                        <div class="row ">
-                            <div class="col cardSpecificImage">
-                                <img src="https://image.flaticon.com/icons/svg/2919/2919600.svg" alt=""
-                                    class="cardSpecificImage">
-                            </div>
-                            <div class="col cardSpecificNameAge" style="position: relative; top: 30px ;">
-                                <h5>Mrs. S. XXXX</h5>
-                                <h6>Age: 38</h6>
-                            </div>
-                        </div>
-                        <div class="row" style="padding-top: 20px ;">
-                            <div class="col col-lg-9 cardSpecificText" style="text-align: center;">
-                                <h5 class="cardSpecificSpecialityText">Specialed in North Indian Food</h5>
-                                <h6>Morning/Evening. Rate 1000/- per person. <br>
-                                    Includes cooking & cleaning kitchenware.</h6>
-                            </div>
-                            <div class="col col-lg-3 " style="margin-top: 20px ;">
-                                <button class="btn btn-primary" style="padding: 5px 20px;"><span>Call</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- card 2 -->
-                <div class="col" style="text-align: center;">
-                    <div class="cardSpecific">
-                        <div class="row ">
-                            <div class="col cardSpecificImage">
-                                <img src="https://image.flaticon.com/icons/svg/2919/2919600.svg" alt=""
-                                    class="cardSpecificImage">
-                            </div>
-                            <div class="col cardSpecificNameAge" style="position: relative; top: 30px ;">
-                                <h5>Mrs. S. XXXX</h5>
-                                <h6>Age: 38</h6>
-                            </div>
-                        </div>
-                        <div class="row" style="padding-top: 20px ;">
-                            <div class="col col-lg-9 cardSpecificText" style="text-align: center;">
-                                <h5 class="cardSpecificSpecialityText">Specialed in North Indian Food</h5>
-                                <h6>Morning/Evening. Rate 1000/- per person. <br>
-                                    Includes cooking & cleaning kitchenware.</h6>
-                            </div>
-                            <div class="col col-lg-3 " style="margin-top: 20px ;">
-                                <button class="btn btn-primary" style="padding: 5px 20px;"><span>Call</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <%}%>
+                       <%}%>
         </div>
 
     </div>
