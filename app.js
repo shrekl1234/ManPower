@@ -7,7 +7,10 @@ const { first, rearg, result } = require("lodash");
 const app = express();
 var isUserLoggedIn = false;
 var userFirstName = "";
-
+var fs = require('fs'); 
+var path = require('path'); 
+var multer = require('multer'); 
+// var Bufs = require('bufs');
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -32,6 +35,10 @@ const registerSchema = new mongoose.Schema({
   availableHours: String,
   password: String,
   confirmPassword: String,
+  profilePhoto: {
+    data: Buffer,
+    contentType: String,
+  },
 });
 const Register = mongoose.model("Register", registerSchema);
 app.post("/register", (req, res) => {
@@ -47,7 +54,7 @@ app.post("/register", (req, res) => {
     availableHours,
     password,
     confirmPassword,
-  } = req.body;
+   } = req.body;
 
   if (
     password === confirmPassword &&
@@ -72,6 +79,13 @@ app.post("/register", (req, res) => {
       availableHours: availableHours,
       password: password,
       confirmPassword: confirmPassword,
+      profilePhoto: {
+        data: fs.readFileSync(
+          path.join(__dirname + "/uploads/" + req.body.profilePhoto)
+        ),
+        ffer,
+        contentType: "image/png",
+      },
     });
     newRegister.save();
   }
